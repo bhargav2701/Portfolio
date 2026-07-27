@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhargav Dolasiya | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">Bhargav Dolasiya</a>
+        <button
+          class="nav-hamburger"
+          id="navHamburger"
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div id="particles-canvas"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Bhargav Dolasiya</span>
+          </h1>
+          <div class="hero-typing-wrapper">
+            <span class="hero-typing" id="skillRotator">SQL</span>
+            <span class="typing-cursor">|</span>
+          </div>
+          <p class="hero-tagline">
+            Transforming raw data into meaningful insights through SQL, Python,
+            Power BI, AI, and Business Intelligence.
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="assets/resume/Bhargav_Dolasiya_Resume.pdf"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+              ><i class="fas fa-file-alt"></i> View Resume</a
+            >
+            <a href="#contact" class="btn btn-secondary"
+              ><i class="fas fa-paper-plane"></i> Hire Me</a
+            >
+            <a
+              href="https://github.com/bhargav2701"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="profile-photo-wrapper" id="profilePhotoWrapper">
+            <!-- Outer animated gradient ring -->
+            <div class="profile-ring-outer"></div>
+            <!-- Neon glow -->
+            <div class="profile-photo-glow"></div>
+            <!-- Glassmorphism ring -->
+            <div class="profile-ring-glass"></div>
+            <!-- Inner orbit ring line -->
+            <div class="orbit-ring-inner" id="orbitRingInner"></div>
+            <!-- Outer orbit ring line -->
+            <div class="orbit-ring-outer-line" id="orbitRingOuter"></div>
+            <!-- Profile image (only image in center - no text/badges) -->
+            <img
+              src="https://via.placeholder.com/300x300/1a1a2e/00d4ff?text=Photo"
+              alt="Bhargav Dolasiya"
+              class="profile-photo"
+              id="profilePhoto"
+            />
+            <!-- Floating skill badges container - Inner Orbit -->
+            <div class="floating-skills" id="floatingSkills"></div>
+            <!-- Floating skill badges container - Outer Orbit -->
+            <div class="floating-skills-outer" id="floatingSkillsOuter"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="gradient-text">About</span> Me
+        </h2>
+        <p class="section-subtitle">Get to know me better</p>
+        <div class="about-grid">
+          <div class="about-left">
+            <div class="about-photo reveal">
+              <div class="about-illustration-frame">
+                <div class="about-illustration-glow"></div>
+                <div class="about-illustration-glass"></div>
+                <div class="about-illustration-shine"></div>
+                <img
+                  src="assets/about img/about-placeholder.jpg"
+                  alt="Bhargav Dolasiya - Data Analyst & AI Enthusiast Workspace"
+                  class="about-illustration"
+                  loading="lazy"
+                />
+                <div class="about-illustration-badge">
+                  <span class="badge-dot"></span>
+                  <span class="badge-text">Available for opportunities</span>
+                </div>
+              </div>
+            </div>
+            <div class="stats-row">
+              <div class="stat-box">
+                <span class="stat-number" data-target="15">0</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number" data-target="8">0</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <p>
+              Hello! I'm <strong>Bhargav Dolasiya</strong>, a
+              <strong>Data Analyst &amp; AI Enthusiast</strong> passionate about
+              uncovering insights from data and solving business challenges
+              through analytics. I enjoy working with <strong>SQL</strong>,
+              <strong>Python</strong>, <strong>Power BI</strong>, and
+              <strong>Excel</strong> to build interactive dashboards, perform
+              data analysis, and create solutions that support informed
+              decision-making.
+            </p>
+            <p>
+              I'm committed to continuous learning and regularly expand my
+              expertise in <strong>Artificial Intelligence</strong>,
+              <strong>Business Intelligence</strong>, and
+              <strong>Data Analytics</strong> by building practical projects and
+              staying up to date with the latest technologies. My goal is to
+              leverage data to create efficient, innovative, and impactful
+              solutions.
+            </p>
+            <div class="soft-skills">
+              <h3>Soft Skills</h3>
+              <div class="pills">
+                <span class="pill">Time Management</span>
+                <span class="pill">Teamwork</span>
+                <span class="pill">Communication</span>
+                <span class="pill">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="education-timeline reveal">
+          <h3 class="timeline-heading">
+            <i class="fas fa-graduation-cap"></i> Education
+          </h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">[2022 - 2025]</span>
+                <h4>Bachelor of Computer Applications (BCA)</h4>
+                <p class="timeline-uni">
+                  Tilak Maharashtra Vidyapeeth University, Mumbai
+                </p>
+                <p class="timeline-grade">
+                  CGPA: 6.330 / 10.0 &nbsp;|&nbsp; Grade: A
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">[2021–2022]</span>
+                <h4>H.S.C. – Higher Secondary Certificate</h4>
+                <p class="timeline-uni">
+                  Maharashtra State Board of Secondary and Higher Secondary
+                  Education (MSBSHSE)
+                </p>
+                <p class="timeline-grade">Percentage: 67.50%</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">[2017–2018]</span>
+                <h4>S.S.C. – Secondary School Certificate</h4>
+                <p class="timeline-uni">
+                  Maharashtra State Board of Secondary and Higher Secondary
+                  Education (MSBSHSE)
+                </p>
+                <p class="timeline-grade">Percentage: 67.80%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">
+          My <span class="gradient-text">Skills</span>
+        </h2>
+        <p class="section-subtitle">Technologies I work with</p>
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <h3><i class="fas fa-code"></i> Languages &amp; Web</h3>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-item">
+                <span class="skill-name">HTML</span
+                ><span class="skill-percent">95%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="95"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">CSS</span
+                ><span class="skill-percent">80%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">JavaScript</span
+                ><span class="skill-percent">50%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="50"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">Python</span
+                ><span class="skill-percent">80%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h3><i class="fas fa-chart-bar"></i> Data &amp; Analytics</h3>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-item">
+                <span class="skill-name">MySQL</span
+                ><span class="skill-percent">85%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">Power BI</span
+                ><span class="skill-percent">90%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">Excel</span
+                ><span class="skill-percent">80%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h3><i class="fas fa-tools"></i> Tools &amp; AI</h3>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-item">
+                <span class="skill-name">VS Code</span
+                ><span class="skill-percent">90%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">AI Tools</span
+                ><span class="skill-percent">90%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">AI Prompting</span
+                ><span class="skill-percent">90%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <span class="skill-name">Git &amp; GitHub</span
+                ><span class="skill-percent">80%</span>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">
+          Featured <span class="gradient-text">Projects</span>
+        </h2>
+        <p class="section-subtitle">Some of my recent work</p>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="ai">AI</button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal" data-category="web">
+            <div class="project-thumb">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/00d4ff?text=Project+1"
+                alt="Project"
+              />
+              <div class="project-badges">
+                <span class="badge-stat"
+                  ><i class="fas fa-code"></i> 1.2K+ Lines</span
+                ><span class="badge-stat"
+                  ><i class="fas fa-crown"></i> Premium UI</span
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Django</span><span>Python</span><span>PostgreSQL</span>
+              </div>
+              <h3>[Project Title One]</h3>
+              <p>[Short description of the project goes here.]</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-small btn-outline"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="python">
+            <div class="project-thumb">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/7b2ff7?text=Project+2"
+                alt="Project"
+              />
+              <div class="project-badges">
+                <span class="badge-stat"
+                  ><i class="fas fa-code"></i> 800+ Lines</span
+                ><span class="badge-stat"
+                  ><i class="fas fa-robot"></i> Automation</span
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Python</span><span>Flask</span><span>SQLite</span>
+              </div>
+              <h3>[Project Title Two]</h3>
+              <p>[Short description of the project goes here.]</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-small btn-outline"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="ai">
+            <div class="project-thumb">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/00ff88?text=Project+3"
+                alt="Project"
+              />
+              <div class="project-badges">
+                <span class="badge-stat"
+                  ><i class="fas fa-brain"></i> ML Model</span
+                ><span class="badge-stat"
+                  ><i class="fas fa-chart-line"></i> 92% Acc.</span
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Python</span><span>TensorFlow</span><span>AI</span>
+              </div>
+              <h3>[Project Title Three]</h3>
+              <p>[Short description of the project goes here.]</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-small btn-outline"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="web">
+            <div class="project-thumb">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/ff6b6b?text=Project+4"
+                alt="Project"
+              />
+              <div class="project-badges">
+                <span class="badge-stat"
+                  ><i class="fas fa-code"></i> 2K+ Lines</span
+                ><span class="badge-stat"
+                  ><i class="fas fa-mobile-alt"></i> Responsive</span
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Django</span><span>JavaScript</span><span>API</span>
+              </div>
+              <h3>[Project Title Four]</h3>
+              <p>[Short description of the project goes here.]</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-small btn-outline"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" data-category="other">
+            <div class="project-thumb">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/ffd93d?text=Project+5"
+                alt="Project"
+              />
+              <div class="project-badges">
+                <span class="badge-stat"
+                  ><i class="fas fa-code"></i> 1.5K+ Lines</span
+                ><span class="badge-stat"
+                  ><i class="fas fa-paint-brush"></i> Creative</span
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>HTML/CSS</span><span>JS</span><span>API</span>
+              </div>
+              <h3>[Project Title Five]</h3>
+              <p>[Short description of the project goes here.]</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-small btn-outline"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section certifications" id="certifications">
+      <div class="container">
+        <h2 class="section-title">
+          My <span class="gradient-text">Certifications</span>
+        </h2>
+        <p class="section-subtitle">Verified credentials</p>
+        <div class="certs-grid" id="certsGrid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">
+          Get In <span class="gradient-text">Touch</span>
+        </h2>
+        <p class="section-subtitle">
+          Have a project or opportunity? Let's talk.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:bdolasiya788@gmail.com"
+                  >bdolasiya788@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 89288 70561</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Mumbai, Maharashtra, India</p>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a
+                href="https://github.com/bhargav2701"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://linkedin.com/in/bhargav-dolasiya"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://twitter.com/bhargav2701"
+                target="_blank"
+                rel="noopener"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="mailto:bdolasiya788@gmail.com" aria-label="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+          <div class="contact-form reveal" id="contactFormWrapper">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="formName">Your Name</label>
+                <input
+                  type="text"
+                  id="formName"
+                  placeholder="John Doe"
+                  required
+                />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="formEmail">Your Email</label>
+                <input
+                  type="email"
+                  id="formEmail"
+                  placeholder="john@example.com"
+                  required
+                />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="formMessage">Your Message</label>
+                <textarea
+                  id="formMessage"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+                <span class="form-error"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+            <div class="form-success hidden" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              <p>Thank you! Your message has been sent successfully.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>Bhargav Dolasiya</h3>
+            <p>
+              Building data-driven web applications and intelligent solutions
+              with modern technologies.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i> bdolasiya788@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i> +91 89288 70561</p>
+            <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+          </div>
+          <div class="footer-social">
+            <h4>Follow Me</h4>
+            <div class="social-icons">
+              <a
+                href="https://github.com/bhargav2701"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://linkedin.com/in/bhargav-dolasiya"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://twitter.com/bhargav2701"
+                target="_blank"
+                rel="noopener"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="footerYear"></span> Bhargav Dolasiya. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
