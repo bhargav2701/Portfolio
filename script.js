@@ -149,27 +149,77 @@ const skillsObserver = new IntersectionObserver(
 skillFills.forEach((fill) => skillsObserver.observe(fill));
 
 // ============================================================
-// 7. PROJECT FILTER TABS
+// 7. PROJECTS — CATEGORY CONFIGURATION & FILTERING
 // ============================================================
+
+/**
+ * CATEGORY_CONFIG — Single source of truth for project categories.
+ * Add, remove, or rename categories here. Each entry maps a
+ * data-filter value to its display label.
+ * 
+ * Usage: When you populate projectsData, assign categories using
+ * the keys from this config (e.g., categories: ["python", "data-analytics"]).
+ */
+const CATEGORY_CONFIG = [
+  { key: "data-analytics", label: "Data Analytics" },
+  { key: "mysql-excel",    label: "MySQL & Excel" },
+  { key: "python",         label: "Python" },
+  { key: "web-apps",       label: "Web Apps" },
+  { key: "visualization",  label: "Visualization" },
+  { key: "ai",             label: "AI" },
+];
+
+/**
+ * PROJECTS_DATA — Future home for your project objects.
+ * Each project should have a `categories` array using keys from
+ * CATEGORY_CONFIG. Example:
+ * {
+ *   id: "amazon-sales",
+ *   title: "Amazon Sales Analytics",
+ *   description: "...",
+ *   tags: ["SQL", "Power BI"],
+ *   categories: ["data-analytics", "visualization"],
+ *   ...
+ * }
+ */
+const PROJECTS_DATA = []; // ← Add your projects here later
+
+// ─── Filter Logic ─────────────────────────────────────────────
+
 const filterBtns = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
+const projectsGrid = document.querySelector(".projects-grid");
+
+/**
+ * Filters project cards based on the selected category.
+ * Supports multi-category projects via space-separated data-category.
+ */
+function filterProjects(filterKey) {
+  const cards = projectsGrid.querySelectorAll(".project-card");
+
+  cards.forEach((card) => {
+    const cardCategories = card.getAttribute("data-category") || "";
+    const categories = cardCategories.split(/\s+/).filter(Boolean);
+    const matches = filterKey === "all" || categories.includes(filterKey);
+
+    if (matches) {
+      card.style.display = "block";
+      card.style.opacity = "0";
+      // Force reflow then fade in
+      void card.offsetHeight;
+      card.style.opacity = "1";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// ─── Bind filter buttons ──────────────────────────────────────
+
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     filterBtns.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
-    const filter = btn.getAttribute("data-filter");
-    projectCards.forEach((card) => {
-      const category = card.getAttribute("data-category");
-      if (filter === "all" || category === filter) {
-        card.style.display = "block";
-        card.style.opacity = "0";
-        setTimeout(() => {
-          card.style.opacity = "1";
-        }, 50);
-      } else {
-        card.style.display = "none";
-      }
-    });
+    filterProjects(btn.getAttribute("data-filter"));
   });
 });
 
