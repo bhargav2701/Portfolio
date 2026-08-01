@@ -1,9 +1,9 @@
-# Portfolio Favicon Integration - Task List
+# Walmart Sales Analysis Project Card - Task List
 
 ## Steps
 
 - [x] Plan approved by user
-- [ ] **Step 1**: Generate all favicon files using Python (16x16, 32x32, 48x48, 180x180, 192x192, 512x512, favicon.ico)
-- [ ] **Step 2**: Create `site.webmanifest` in `assets/favicon/`
-- [ ] **Step 3**: Update `<head>` section of `index.html` with favicon/app icon/manifest tags
-- [ ] **Step 4**: Verify the icons exist and clean up
+- [x] **Step 1**: Create premium white/navy placeholder thumbnail (SVG) for the Walmart Sales Data Analysis project
+- [x] **Step 2**: Replace Project 1 in `index.html` with the Walmart project card (Featured badge, category label, tech badges, GitHub buttons)
+- [x] **Step 3**: Add CSS for Featured badge, category label, ~250ms hover animations, and keyboard focus states
+- [x] **Step 4**: Verify responsive layout and open in browser to confirm

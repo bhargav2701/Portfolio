@@ -1226,27 +1226,59 @@ ul {
 }
 
 .project-card {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .project-card:hover {
   transform: translateY(-8px);
   border-color: var(--accent-blue);
+  box-shadow: 0 16px 45px rgba(0, 212, 255, 0.18);
+}
+.project-card:focus-within {
+  border-color: var(--accent-blue);
   box-shadow: 0 12px 40px rgba(0, 212, 255, 0.15);
+}
+
+/* Featured badge - premium top-right of the card */
+.featured-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  background: var(--gradient-1);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(0, 212, 255, 0.35);
+  pointer-events: none;
+}
+.featured-badge i {
+  font-size: 0.65rem;
 }
 
 .project-thumb {
   position: relative;
   overflow: hidden;
+  border-radius: inherit;
+  height: 200px;
 }
 .project-thumb img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  display: block;
+  transition: transform 0.25s ease;
 }
 .project-card:hover .project-thumb img {
   transform: scale(1.05);
@@ -1304,6 +1336,19 @@ ul {
   margin-bottom: 14px;
   line-height: 1.5;
 }
+.project-info .project-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: rgba(123, 47, 247, 0.1);
+  border: 1px solid rgba(123, 47, 247, 0.2);
+}
 .project-links {
   display: flex;
   gap: 10px;
@@ -1312,6 +1357,23 @@ ul {
 .project-links .btn-small {
   font-size: 0.78rem;
   padding: 6px 14px;
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.project-links .btn-small:hover {
+  transform: translateY(-3px);
+}
+.project-links .btn-primary:hover {
+  box-shadow: 0 8px 22px rgba(0, 212, 255, 0.45);
+}
+.project-links .btn-outline:hover {
+  border-color: var(--accent-purple);
+  color: var(--accent-purple);
+  box-shadow: 0 8px 22px rgba(123, 47, 247, 0.25);
+}
+.project-links a:focus-visible,
+.filter-btn:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
 }
 
 /* ============================================================ */
