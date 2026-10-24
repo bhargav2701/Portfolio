@@ -1227,6 +1227,8 @@ ul {
 
 .project-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -1309,6 +1311,9 @@ ul {
 }
 
 .project-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 20px;
 }
 .project-tags {
@@ -1353,6 +1358,7 @@ ul {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 .project-links .btn-small {
   font-size: 0.78rem;
