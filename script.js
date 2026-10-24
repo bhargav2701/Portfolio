@@ -6,7 +6,15 @@
 // 1. SKILL ROTATOR FOR HERO SECTION
 // ============================================================
 const rotatorElement = document.getElementById("skillRotator");
-const skills = ["SQL", "Python", "Power BI", "Excel", "AI"];
+const skills = [
+  "SQL Developer",
+  "Python Developer",
+  "Power BI Developer",
+  "Excel Specialist",
+  "AI Enthusiast",
+  "Data Analyst",
+  "Web Developer",
+];
 let skillIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
