@@ -126,6 +126,7 @@ const statsObserver = new IntersectionObserver(
 statNumbers.forEach((stat) => statsObserver.observe(stat));
 function animateCounter(element, target) {
   let current = 0;
+  const suffix = element.getAttribute("data-suffix") || "";
   const increment = Math.ceil(target / 40);
   const interval = setInterval(() => {
     current += increment;
@@ -133,7 +134,7 @@ function animateCounter(element, target) {
       current = target;
       clearInterval(interval);
     }
-    element.textContent = current;
+    element.textContent = `${current}${suffix}`;
   }, 30);
 }
 
